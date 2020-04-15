@@ -71,7 +71,7 @@ public class StandardAirFactorCalculator //클래스 이름
 		
 	}
 	
-	public void Calculate(float height)//고도를 입력하면 압력을 보여주는 함수
+	public float Calculate(float height)//고도를 입력하면 압력을 보여주는 함수
 	{
 		float calculatedFactor;
 		
@@ -87,5 +87,6 @@ public class StandardAirFactorCalculator //클래스 이름
 				interpolationCoefficient.get(3)*(height-this.height.get(0))*(height-this.height.get(1))*(height-this.height.get(2));
 		
 		System.out.println("계산값 : "+calculatedFactor);
+		return calculatedFactor;
 	}
 }
